@@ -13,6 +13,7 @@ const MenuList = props => {
           description={order.description}
           image={order.image}
           addToBasket={() => props.addToBasket(idx)}
+          onDelete={() => props.deleteAToDo(idx)}
         />
       ))}
     </ul>

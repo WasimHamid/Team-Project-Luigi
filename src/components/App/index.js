@@ -65,14 +65,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header" />
-
-        <MenuList items={this.state.pizzas} />
+        <header className="App-header">LUIGI'S PIZZA</header>
         <div className="Menu" />
         <Increment />
-        <Testingit onDelete={this.deleteAToDo} />
+        <Testingit />
 
-        <MenuList items={this.state.pizzas} addToBasket={this.addToBasket} />
+        <MenuList
+          items={this.state.pizzas}
+          addToBasket={this.addToBasket}
+          onDelete={this.deleteAToDo}
+        />
       </div>
     );
   }
