@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import MenuItem from "../MenuItem";
 
 const MenuList = props => {
@@ -12,6 +12,7 @@ const MenuList = props => {
           price={order.price}
           description={order.description}
           image={order.image}
+          addToBasket={() => props.addToBasket(idx)}
         />
       ))}
     </ul>
