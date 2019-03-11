@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+
 import "./App.css";
 import MenuList from "../MenuList";
+import Increment from "../Increment";
+import Testingit from "../Testingit";
 
 class App extends Component {
   constructor(props) {
@@ -38,6 +41,14 @@ class App extends Component {
       ]
     };
   }
+  deleteAToDo = index => {
+    this.setState(state => ({
+      pizzas: [
+        ...state.pizzas.slice(0, index),
+        ...state.pizzas.slice(index + 1)
+      ]
+    }));
+  };
 
   // want a function to change the quantity of that specific pizza to 1
   addToBasket = index => {
@@ -55,6 +66,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header" />
+
+        <MenuList items={this.state.pizzas} />
+        <div className="Menu" />
+        <Increment />
+        <Testingit onDelete={this.deleteAToDo} />
+
         <MenuList items={this.state.pizzas} addToBasket={this.addToBasket} />
       </div>
     );
