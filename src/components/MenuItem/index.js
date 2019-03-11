@@ -7,6 +7,7 @@ const MenuItem = props => {
       <div className="menu-item-price">{props.price}</div>
       <div className="menu-item-desc">{props.description}</div>
       <img className="item-image" src={props.image} alt="pictures of pizza" />
+      <button onClick={props.addToBasket}>Add Pizza to Basket</button>
     </div>
   );
 };
