@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import MenuList from "../MenuList";
+import Increment from "../Increment";
+import Testingit from "../Testingit";
 
 class App extends Component {
   constructor(props) {
@@ -39,12 +41,23 @@ class App extends Component {
       ]
     };
   }
+  deleteAToDo = index => {
+    this.setState(state => ({
+      pizzas: [
+        ...state.pizzas.slice(0, index),
+        ...state.pizzas.slice(index + 1)
+      ]
+    }));
+  };
 
   render() {
     return (
       <div className="App">
         <header className="App-header" />
         <MenuList items={this.state.pizzas} />
+        <div className="Menu" />
+        <Increment />
+        <Testingit onDelete={this.deleteAToDo} />
       </div>
     );
   }
