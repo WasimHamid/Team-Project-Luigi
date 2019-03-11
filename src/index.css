@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* display: flex; */
 }
 
 code {
@@ -20,4 +21,11 @@ code {
 .item-box {
   border: 2px solid black;
   margin: 5px;
+}
+
+ul {
+  width: 600px;
+  border: 1px solid;
+  /* justify-content: center;
+  align-items: center; */
 }
