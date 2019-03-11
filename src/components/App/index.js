@@ -12,25 +12,29 @@ class App extends Component {
           name: "Margerita",
           quantity: 0,
           price: "£6",
-          description: "Simply the best!"
+          description: "Simply the best!",
+          image: "/images/PizzaMargherita.jpg"
         },
         {
           name: "Tandoori Hot",
           quantity: 0,
           price: "£8",
-          description: "Karen recommends!"
+          description: "Karen recommends!",
+          image: "/images/tandooripizza.jpg"
         },
         {
           name: "Ham and Pineapple",
           quantity: 0,
           price: "£2",
-          description: "If you're into that"
+          description: "If you're into that",
+          image: "/images/khampineapple.png"
         },
         {
           name: "Veggie Supreme",
           quantity: 0,
           price: "£6",
-          description: "Suitable for Vegetarians"
+          description: "Suitable for Vegetarians",
+          image: "/images/food-hero-newveggie.png"
         }
       ]
     };
@@ -40,7 +44,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header" />
-        <MenuList />
+        <MenuList items={this.state.pizzas} />
       </div>
     );
   }

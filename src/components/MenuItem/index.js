@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 
-class MenuItem extends Component {
-  render() {
-    return <li>"Here's a list item"</li>;
-  }
-}
+const MenuItem = props => {
+  return (
+    <div>
+      <div> {props.name} </div>
+
+      <div>{props.price}</div>
+      <img src={props.image} />
+    </div>
+  );
+};
+
 export default MenuItem;
