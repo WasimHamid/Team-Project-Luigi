@@ -1,0 +1,11 @@
+.item-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-image {
+  max-width: 40%;
+  border: 1px solid;
+  border-radius: 100%;
+}
