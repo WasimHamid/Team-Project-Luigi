@@ -10,6 +10,7 @@ const MenuList = props => {
           name={order.name}
           quantity={order.quantity}
           price={order.price}
+          description={order.description}
           image={order.image}
         />
       ))}
